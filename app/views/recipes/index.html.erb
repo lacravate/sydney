@@ -1,0 +1,33 @@
+<p style="color: green"><%= notice %></p>
+
+<h1><%= t :recipes%></h1>
+
+<form action="/">
+  <p><%= t :choose_ingredients %><p>
+  <input type="text" name="ingredients">
+</form>
+
+<div id="recipes">
+  <%- if @recipes.present? || @ingredients.present? %>
+    <%- if @recipes.present? %>
+      <%= @recipes.size == 26 ? 25 : @recipes.size  %> <%= t :found_recipes %>
+    <%- else%>
+      <%= t :no_recipes_found %>
+    <%- end%>
+    avec les ingrédients :
+    <br>
+    <%= @ingredients.join ", " %>
+  <%- end %>
+  <%- if @recipes.size == 26 %>
+    <br>
+    <%= t :more_results %>
+  <%- end %>
+  <% @recipes[0..24].each do |recipe| %>
+    <p>
+      <%= recipe.name %> | <%= link_to t(:show_recipe), recipe %>
+      <br>
+      <%= recipe.total_time %> | <%= recipe.difficulty %> | note : <%= recipe.rate %>
+    </p>
+  <% end %>
+</div>
+

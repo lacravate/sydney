@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>
+  <%= @recipe.name %>
+</h1>
+<h3>
+  <%= t :by %> : <%= @recipe.author %>
+</h3>
+<%= t :guests %> : <%= @recipe.people_quantity %> | <%= t :rate %> : <%= @recipe.rate %> | <%= @recipe.difficulty %> | <%= @recipe.cook_time %> (<%= t :cooking_time %>), <%= @recipe.total_time %> (<%= t :total %>)
+<p>
+  <%- @recipe.ingredients.each do |ingredient| %>
+    <%= ingredient %><br>
+  <%- end %>  
+</p>
+<div>
+  <%= link_to t(:back_to_recipes), recipes_path %>
+</div>
+
