@@ -10,13 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_03_154231) do
-  create_table "recipe_elements", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "element"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
+ActiveRecord::Schema[7.0].define(version: 2023_03_05_011615) do
   create_table "recipes", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "author"
     t.integer "rate"
@@ -25,6 +19,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_03_154231) do
     t.string "prep_time"
     t.string "total_time"
     t.integer "people_quantity"
+    t.text "searchable_ingredients"
     t.string "name"
     t.string "cook_time"
     t.datetime "created_at", null: false
