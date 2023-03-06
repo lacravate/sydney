@@ -1,0 +1,13 @@
+fr:
+  recipes: "Trouvez votre recette !!!"
+  choose_ingredients: 'Entrez les ingrédients que vous voulez utiliser ci-dessous (séparés par une virgule), et tapez sur "Entrée" :'
+  found_recipes: "recette(s) trouvée(s)"
+  no_recipes_found: "Nous n'avons pas trouvé de recette"
+  more_results: "(il y avait plus de resultats, rajoutez peut-être des ingrédients pour affiner)"
+  show_recipe: "voir la recette"
+  by: "par"
+  guests: "convives"
+  rate: "note"
+  back_to_recipes: "retour aux recherches"
+  total: "total"
+  cooking_time: "cuisson"
